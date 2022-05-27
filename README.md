@@ -38,7 +38,7 @@ You can see my Website UI below. You can view my low-fidelity [here](https://www
 
 <img width="947" alt="Screenshot 2022-05-27 at 8 37 22 PM" src="https://user-images.githubusercontent.com/79802180/170727108-b679b476-02a5-41b5-afeb-4ee415afcdaf.png">
 
-### Colour Palatte and Font
+### Colour Palette and Font
 
 <img width="678" alt="Screenshot 2022-05-27 at 8 35 52 PM" src="https://user-images.githubusercontent.com/79802180/170726835-8435d7e9-11b8-4804-9aec-549b1b2ef51d.png">
 
@@ -73,16 +73,16 @@ This page takes the weights of trained emotional recognition model from flask se
 <img width="1440" alt="Screenshot 2022-05-27 at 6 26 41 PM" src="https://user-images.githubusercontent.com/79802180/170703569-d2921df7-4ae6-4ce8-ad9b-747e403620d4.png">
 
 ## Emotion with Name Detection 
-This page detects the emotion of the person in front of camera be it in photo,video or real time along with their name . It also provides some buttons corresponding to their emotion which further directs them to a pop-up box corresponding to that particular emotion with appealing illustrations and messages to lift up a person's mood.  
+This page detects the emotion of the person in front of the camera, be it in photo,video or real time along with their name . It also provides some buttons corresponding to their emotion which further directs them to a pop-up box corresponding to that particular emotion with appealing illustrations and messages to lift up a person's mood.  
   
-The emotion recognition process is same as that done in Emotion Page. For Face Recognition, First we make an array of the face encodings and the names of the users we have stored in database by traversing the uploads folder,then we pass these encodings to face recognition module of python. It compares the encodings of the frames of the user infront of the camera to the encodings stored in encodings array.It predicts the user which has the same encoding as that in our array  or encoding which has minimum distance to that of user's.If there is a match the name is passed  and displayed along with emotion. If the database does not has the user's image, his name will be shown "Unknown".
+The emotion recognition process is the same as that done in the Emotion Page. For Face Recognition, First we make an array of the face encodings and the names of the users we have stored in the database by traversing the uploads folder,then we pass these encodings to the face recognition module of python. It compares the encodings of the frames of the user in front of the camera to the encodings stored in encodings array.It predicts the user which has the same encoding as that in our array  or encoding which has minimum distance to that of user's.If there is a match the name is passed  and displayed along with emotion. If the database does not have the user's image, his name will be shown "Unknown".
 
 <img width="1436" alt="Screenshot 2022-05-27 at 6 15 06 PM" src="https://user-images.githubusercontent.com/79802180/170703171-b561a507-76cb-4b42-888c-a278f63b6dda.png">
 <img width="1431" alt="Screenshot 2022-05-27 at 6 15 23 PM" src="https://user-images.githubusercontent.com/79802180/170703694-fccb52f0-401b-4c7f-bc94-eb4c69cd63be.png">
 
 ## Model :
 The Emotional Recognition Model is a 6-7 layered deep convolutional neural network trained with FER Dataset. The link to the dataset can be found [here](https://www.kaggle.com/deadskull7/fer2013). Initially I decided to train the model on all the 7 emotions but due to a very low test accuracy of 17% on test data,
-We had to cut down to 4 emotions-`happy`, `sad`, `angry` , `neutral`. The final accuracy improved to 41%. The metrices choosen for the model is accuracy and the loss function is the Categorical Cross Entropy Function.
+We had to cut down to 4 emotions-`happy`, `sad`, `angry` , `neutral`. The final accuracy improved to 41%. The metrics chosen for the model is accuracy and the loss function is the Categorical Cross Entropy Function.
 
 # Tech Stacks :
 <img width="685" alt="Screenshot 2022-05-27 at 8 35 12 PM" src="https://user-images.githubusercontent.com/79802180/170726697-93249744-3f3a-4888-953d-7a7c9bec6aff.png">
